@@ -9,6 +9,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://trymemex.com"),
   title: "Memex - Your Universal Brain",
   description:
     "Sync books, video, and audio into one thinking tool. Native for iOS & Mac. The universal content library for your second brain.",
@@ -25,6 +26,15 @@ export const metadata: Metadata = {
     "video annotations",
   ],
   authors: [{ name: "Memex" }],
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+    ],
+    apple: [{ url: "/apple-touch-icon.png", sizes: "180x180" }],
+  },
+  manifest: "/manifest.json",
   openGraph: {
     title: "Memex - Your Universal Brain",
     description:
@@ -32,12 +42,21 @@ export const metadata: Metadata = {
     url: "https://trymemex.com",
     siteName: "Memex",
     type: "website",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Memex - Your Universal Brain",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Memex - Your Universal Brain",
     description:
       "Sync books, video, and audio into one thinking tool. Native for iOS & Mac.",
+    images: ["/og-image.png"],
   },
 };
 
